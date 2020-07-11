@@ -112,6 +112,8 @@ class App extends React.Component
       {
         Transactions: arrCopy
       })
+
+    localStorage.setItem("Transactions",JSON.stringify(arrCopy));  
   }
 
   render()
