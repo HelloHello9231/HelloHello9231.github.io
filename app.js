@@ -108,12 +108,13 @@ class App extends React.Component
       if(arrCopy[i].date === transactionObj.date) arrCopy.splice(i,1);
     }
 
+    localStorage.setItem("Transactions",JSON.stringify(arrCopy));
+
     this.setState(
       {
         Transactions: arrCopy
       })
 
-    localStorage.setItem("Transactions",JSON.stringify(arrCopy));  
   }
 
   render()
